@@ -1,3 +1,4 @@
+package src;
 public class Recurso {
     private String titulo;
     private String tipo;
