@@ -9,13 +9,11 @@ public class ProjetoColaborativo extends Projeto implements Colaboracao {
 
     @Override
     public void comentar(String comentario) {
-        // Implemente o código para comentar no projeto colaborativo
         System.out.println("Comentário adicionado: " + comentario);
     }
 
     @Override
     public void adicionarArquivo(String arquivo) {
-        // Implemente o código para adicionar arquivo no projeto colaborativo
         System.out.println("Arquivo adicionado: " + arquivo);
     }
 }

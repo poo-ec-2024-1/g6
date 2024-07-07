@@ -1,9 +1,9 @@
 package src;
 public class Aluno extends Usuario {
     private String curso;
-    private String matricula;
+    private int matricula;
 
-    public Aluno(String nome, String email, String curso, String matricula, String país) {
+    public Aluno(String nome, String email, String curso, int matricula, String país) {
         super(nome, email,país);
         this.curso = curso;
         this.matricula = matricula;
@@ -13,7 +13,7 @@ public class Aluno extends Usuario {
         return curso;
     }
 
-    public String getMatricula() {
+    public int getMatricula() {
         return matricula;
     }
 }
