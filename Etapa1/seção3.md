@@ -1,5 +1,5 @@
-Divisão de Tarefas
-# 3.1 Tarefas (Issues):
+# Divisão de Tarefas
+## 3.1 Tarefas (Issues):
 Configuração do repositório no GitHub.
 Criação das classes básicas (Usuário, Aluno, GrupoEstudo, Recurso, Quiz, Projeto, Tarefa, Colaboração, ProjetoColaborativo).
 Implementação de funcionalidades para cadastro e login de usuários.
@@ -9,5 +9,5 @@ Desenvolvimento das funcionalidades de gestão de projetos.
 Testes e validação de cada módulo.
 Documentação do projeto.
 
-# 3.2 Atribuição de Tarefas e Responsabilidades:
+## 3.2 Atribuição de Tarefas e Responsabilidades:
 Cada membro do grupo será responsável por diferentes partes do projeto, como back-end, front-end, testes e documentação. 
