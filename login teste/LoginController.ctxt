@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LoginController
+comment1.params=
+comment1.target=void\ login()
+comment2.params=username\ password
+comment2.target=boolean\ isValidCredentials(java.lang.String,\ java.lang.String)
+numComments=3
