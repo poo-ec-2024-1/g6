@@ -1,34 +1,36 @@
 package src;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Aluno aluno1 = new Aluno("Maria", "maria@example.com", "Engenheria da computação", 123456 ,"Brasil");
-        Aluno aluno2 = new Aluno("Andreia", "Andreia@example.com", "Medicina", 654789 , "EUA");
-        
-        GrupoEstudo grupo = new GrupoEstudo("Grupo de estudo de POO");
-        grupo.adicionarAluno(aluno1);
-        grupo.adicionarAluno(aluno2);
+        Aluno aluno1 = new Aluno("Maria", "maria@example.com", "senha123", "Engenharia", 12345, "Brasil");
+        aluno1.login("maria@example.com", "senha123");
 
-        Recurso recurso1 = new Recurso("Livro de Java", "Livro", "Conteúdo de Progamação");
-        grupo.adicionarRecurso(recurso1);
+        GrupoEstudo grupo1 = new GrupoEstudo("Grupo de POO");
+        aluno1.participarGrupo(grupo1);
 
-        Quiz quiz = new Quiz(
-            Arrays.asList("Pergunta 1", "Pergunta 2"),
-            Arrays.asList("Resposta 1", "Resposta 2")
-        );
+        Recurso recurso1 = new Recurso("Apostila de Java", "PDF", "Conteúdo da apostila");
+        aluno1.compartilharRecurso(grupo1, recurso1);
 
-        Projeto projeto = new Projeto("Projeto X", "Descrição do Projeto X", new Date(), new Date());
-        projeto.adicionarAluno(aluno1);
+        Quiz quiz1 = new Quiz();
+        quiz1.adicionarPergunta("Qual é a diferença entre equals()e ==?", "Primeiro, “ ==” é um operador enquanto equals()é um método");
+        List<String> respostas = new ArrayList<>();
+        respostas.add("Primeiro, “ ==” é um operador enquanto equals()é um método");
+        aluno1.responderQuiz(quiz1, respostas);
 
-        Tarefa tarefa = new Tarefa("Tarefa 1", "Descrição da Tarefa 1", new Date(), "Pendente", aluno1);
-        projeto.adicionarTarefa(tarefa);
+        Projeto projeto1 = new Projeto("Projeto de Física", "Construção de um foguete", new Date(), new Date());
+        aluno1.participarGrupo(grupo1);  // Usar o método participarGrupo para simular o aluno no projeto
+        Tarefa tarefa1 = new Tarefa("Montagem", "Montar o foguete", new Date(), aluno1);
+        projeto1.adicionarTarefa(tarefa1);
 
-        ProjetoColaborativo projetoColaborativo = new ProjetoColaborativo("Projeto Colaborativo Y", "Descrição do Projeto Y", new Date(), new Date());
-        projetoColaborativo.comentar("Este é um comentário no projeto colaborativo.");
-        projetoColaborativo.adicionarArquivo("arquivo.pdf");
+        ProjetoColaborativo projetoColab1 = new ProjetoColaborativo("Projeto Colaborativo", "Desenvolvimento de software", new Date(), new Date());
+        projetoColab1.comentar("Primeiro comentário do projeto.");
+        projetoColab1.adicionarArquivo("documento.txt");
+        projetoColab1.comecar();
+
+        projeto1.visualizarProjeto();
     }
-    
 }

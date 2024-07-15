@@ -1,19 +1,33 @@
+package src;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class Quiz {
-    private List<String> perguntas;
-    private List<String> respostas;
+// Classe Quiz
+class Quiz {
+    private List<String> perguntas = new ArrayList<>();
+    private List<String> respostasCorretas = new ArrayList<>();
 
-    public Quiz(List<String> perguntas, List<String> respostas) {
-        this.perguntas = perguntas;
-        this.respostas = respostas;
+    public void adicionarPergunta(String pergunta, String resposta) {
+        perguntas.add(pergunta);
+        respostasCorretas.add(resposta);
     }
 
-    public List<String> getPerguntas() {
-        return perguntas;
+    public void removerPergunta(String pergunta) {
+        int index = perguntas.indexOf(pergunta);
+        if (index >= 0) {
+            perguntas.remove(index);
+            respostasCorretas.remove(index);
+        }
     }
 
-    public List<String> getRespostas() {
-        return respostas;
+    public void realizarQuiz(List<String> respostas) {
+        int pontuacao = 0;
+        for (int i = 0; i < respostas.size(); i++) {
+            if (respostas.get(i).equals(respostasCorretas.get(i))) {
+                pontuacao++;
+            }
+        }
+        System.out.println("Quiz realizado! Pontuação: " + pontuacao + "/" + perguntas.size());
     }
 }

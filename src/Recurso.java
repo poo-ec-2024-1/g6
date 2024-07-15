@@ -1,4 +1,8 @@
-public class Recurso {
+package src;
+
+
+// Classe Recurso
+class Recurso {
     private String titulo;
     private String tipo;
     private String conteudo;
@@ -9,15 +13,9 @@ public class Recurso {
         this.conteudo = conteudo;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public String getTipo() {
-        return tipo;
-    }
-
-    public String getConteudo() {
-        return conteudo;
+    public void visualizar() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Tipo: " + tipo);
+        System.out.println("Conteúdo: " + conteudo);
     }
 }
