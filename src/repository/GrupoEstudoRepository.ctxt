@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=GrupoEstudoRepository
+comment1.params=databaseUrl
+comment1.target=GrupoEstudoRepository(java.lang.String)
+comment2.params=grupoEstudo
+comment2.target=void\ createGrupoEstudo(model.GrupoEstudo)
+comment3.params=id
+comment3.target=model.GrupoEstudo\ getGrupoEstudo(int)
+comment4.params=grupoEstudo
+comment4.target=void\ updateGrupoEstudo(model.GrupoEstudo)
+comment5.params=grupoEstudo
+comment5.target=void\ deleteGrupoEstudo(model.GrupoEstudo)
+comment6.params=
+comment6.target=java.util.List\ getAllGruposEstudo()
+comment7.params=
+comment7.target=void\ close()
+numComments=8

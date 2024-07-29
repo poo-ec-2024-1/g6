@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=UsuarioController
+comment1.params=connectionSource
+comment1.target=UsuarioController(com.j256.ormlite.support.ConnectionSource)
+comment2.params=
+comment2.target=void\ login()
+comment3.params=
+comment3.target=void\ logout()
+numComments=4

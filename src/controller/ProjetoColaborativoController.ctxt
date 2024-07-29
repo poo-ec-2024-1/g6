@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ProjetoColaborativoController
+comment1.params=databaseUrl
+comment1.target=ProjetoColaborativoController(java.lang.String)
+comment2.params=projetoColaborativo
+comment2.target=void\ adicionarProjetoColaborativo(model.ProjetoColaborativo)
+comment3.params=id
+comment3.target=model.ProjetoColaborativo\ obterProjetoColaborativo(int)
+comment4.params=projetoColaborativo
+comment4.target=void\ atualizarProjetoColaborativo(model.ProjetoColaborativo)
+comment5.params=projetoColaborativo
+comment5.target=void\ removerProjetoColaborativo(model.ProjetoColaborativo)
+comment6.params=
+comment6.target=java.util.List\ listarProjetosColaborativos()
+comment7.params=
+comment7.target=void\ fecharConexao()
+numComments=8

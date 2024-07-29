@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Projeto
+comment1.params=
+comment1.target=Projeto()
+comment2.params=nome\ descricao
+comment2.target=Projeto(java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=int\ getId()
+comment4.params=id
+comment4.target=void\ setId(int)
+comment5.params=
+comment5.target=java.lang.String\ getNome()
+comment6.params=nome
+comment6.target=void\ setNome(java.lang.String)
+comment7.params=
+comment7.target=java.lang.String\ getDescricao()
+comment8.params=descricao
+comment8.target=void\ setDescricao(java.lang.String)
+numComments=9

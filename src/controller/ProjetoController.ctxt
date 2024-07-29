@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=ProjetoController
+comment1.params=databaseUrl
+comment1.target=ProjetoController(java.lang.String)
+comment2.params=projeto
+comment2.target=void\ adicionarProjeto(model.Projeto)
+comment3.params=id
+comment3.target=model.Projeto\ obterProjeto(int)
+comment4.params=projeto
+comment4.target=void\ atualizarProjeto(model.Projeto)
+comment5.params=projeto
+comment5.target=void\ removerProjeto(model.Projeto)
+comment6.params=
+comment6.target=java.util.List\ listarProjetos()
+comment7.params=
+comment7.target=void\ fecharConexao()
+numComments=8

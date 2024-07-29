@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ProjetoColaborativo
+comment1.params=
+comment1.target=ProjetoColaborativo()
+comment2.params=nome\ descricao\ objetivo
+comment2.target=ProjetoColaborativo(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getObjetivo()
+comment4.params=objetivo
+comment4.target=void\ setObjetivo(java.lang.String)
+comment5.params=
+comment5.target=void\ colaborar()
+numComments=6

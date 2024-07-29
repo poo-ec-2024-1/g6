@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=GrupoEstudoController
+comment1.params=databaseUrl
+comment1.target=GrupoEstudoController(java.lang.String)
+comment2.params=grupoEstudo
+comment2.target=void\ adicionarGrupoEstudo(model.GrupoEstudo)
+comment3.params=id
+comment3.target=model.GrupoEstudo\ obterGrupoEstudo(int)
+comment4.params=grupoEstudo
+comment4.target=void\ atualizarGrupoEstudo(model.GrupoEstudo)
+comment5.params=grupoEstudo
+comment5.target=void\ removerGrupoEstudo(model.GrupoEstudo)
+comment6.params=
+comment6.target=java.util.List\ listarGruposEstudo()
+comment7.params=
+comment7.target=void\ fecharConexao()
+numComments=8

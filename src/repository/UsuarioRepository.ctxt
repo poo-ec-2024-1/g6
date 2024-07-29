@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=UsuarioRepository
+comment1.params=databaseUrl
+comment1.target=UsuarioRepository(java.lang.String)
+comment2.params=usuario
+comment2.target=void\ createUsuario(model.Usuario)
+comment3.params=id
+comment3.target=model.Usuario\ getUsuario(int)
+comment4.params=usuario
+comment4.target=void\ updateUsuario(model.Usuario)
+comment5.params=usuario
+comment5.target=void\ deleteUsuario(model.Usuario)
+comment6.params=
+comment6.target=void\ close()
+numComments=7

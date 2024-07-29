@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=QuizRepository
+comment1.params=databaseUrl
+comment1.target=QuizRepository(java.lang.String)
+comment2.params=quiz
+comment2.target=void\ createQuiz(model.Quiz)
+comment3.params=id
+comment3.target=model.Quiz\ getQuiz(int)
+comment4.params=quiz
+comment4.target=void\ updateQuiz(model.Quiz)
+comment5.params=quiz
+comment5.target=void\ deleteQuiz(model.Quiz)
+comment6.params=
+comment6.target=java.util.List\ getAllQuizzes()
+comment7.params=
+comment7.target=void\ close()
+numComments=8
