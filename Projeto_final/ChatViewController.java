@@ -9,13 +9,22 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
+/**
+ * Controlador da tela de chat.
+ * Resposável por exibir as mensagens carregadas do banco de dados.
+ * Além de posssibiltar o envio de novas mensagens.
+ */
 public class ChatViewController {
+    //Área de chat
     @FXML
     private TextArea chatArea;
 
+    //Mensagem do chat
     @FXML
     private TextField messageField;
 
+    //Botão de envio de mensagem 
     @FXML
     private Button sendButton;
 
@@ -29,6 +38,10 @@ public class ChatViewController {
         carregarMensagens();
     }
 
+    
+    /**
+     * O carregamento das mensagens do grupo é feito pelo banco de dados e mostrado no chat.
+     */
     private void carregarMensagens() {
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:grupo.db")) {
             String sql = "SELECT mensagem FROM Mensagens WHERE grupo = ?";
@@ -44,6 +57,10 @@ public class ChatViewController {
         }
     }
 
+    
+    /**
+     * O usuário após digitar a mensagem pressiona o botão de enviar e o sistema a apresenta no chat.
+     */
     @FXML
     private void handleSendMessage() {
         String mensagem = messageField.getText();
@@ -54,6 +71,10 @@ public class ChatViewController {
         }
     }
 
+    
+    /**
+     * A nova mensagem inserida também é guardada no banco de dados.
+     */
     private void inserirMensagemNoBanco(String mensagem) {
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:grupo.db")) {
             String sql = "INSERT INTO Mensagens (grupo, mensagem) VALUES (?, ?)";
