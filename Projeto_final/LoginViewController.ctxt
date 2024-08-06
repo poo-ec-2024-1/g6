@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=LoginViewController
+comment1.params=
+comment1.target=void\ handleLogin()
+comment2.params=
+comment2.target=void\ handleCadastro()
+comment3.params=email\ senha
+comment3.target=boolean\ verificarUsuarioNoBanco(java.lang.String,\ java.lang.String)
+comment4.params=
+comment4.target=void\ abrirTelaPerfil()
+numComments=5

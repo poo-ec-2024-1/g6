@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginViewController">
+   <children>
+      <TextField fx:id="emailField" layoutX="98.0" layoutY="105.0" prefHeight="27.0" prefWidth="204.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #0598ff;" />
+      <PasswordField fx:id="senhaField" layoutX="98.0" layoutY="150.0" prefHeight="27.0" prefWidth="204.0" promptText="Senha" style="-fx-border-color: transparent; -fx-border-color: #0598ff;" />
+      <Button fx:id="loginButton" layoutX="98.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="36.0" prefWidth="82.0" style="-fx-background-color: #0598ff;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="132.0" layoutY="47.0" prefHeight="36.0" prefWidth="131.0" text="Faça Login" textFill="#0598ff">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="cadastrarButton" layoutX="188.0" layoutY="221.0" mnemonicParsing="false" onAction="#handleCadastro" prefHeight="36.0" prefWidth="114.0" style="-fx-background-color: #0598ff;" text="Cadastrar-se" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

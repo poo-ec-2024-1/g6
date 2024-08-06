@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=CadastroViewController
+comment1.params=
+comment1.target=void\ handleCadastrar()
+comment2.params=nome\ email\ senha
+comment2.target=boolean\ inserirDadosNoBanco(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=void\ handleVoltarButtonAction()
+numComments=4
