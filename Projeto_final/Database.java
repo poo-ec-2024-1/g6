@@ -2,10 +2,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
+/**
+ * Classe responsável por administrar a conexão com o banco de dados SQLite.
+ */
 public class Database {
     private static final String DB_NAME = "Usuarios.db";
     private Connection connection;
 
+    /**
+     * Construtor da classe Database.
+     */
     public Database() {
         try {
             Class.forName("org.sqlite.JDBC");
@@ -16,10 +23,17 @@ public class Database {
         }
     }
 
+    
+    /**
+     * @return a conexão com o banco de dados SQLite.
+     */
     public Connection getConnection() {
         return connection;
     }
 
+     /**
+     * Finaliza a conexão com o banco de dados SQLite.
+     */
     public void closeConnection() {
         try {
             if (connection != null) {
@@ -31,6 +45,11 @@ public class Database {
         }
     }
 
+    
+    /**
+     * Método principal da classe Database.
+     * Argumentos da linha de comando.
+     */
     public static void main(String[] args) {
         Database db = new Database();
         db.closeConnection();
