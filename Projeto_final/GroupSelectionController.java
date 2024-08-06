@@ -13,21 +13,39 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
+/**
+ * Controlador para a seleção de grupos.
+ * Responsável pelo processamento dos grupos pelo banco de dados do SQLite.
+ * O usuário consegue acessar um grupo com a tela de chat do selecionado.
+ */
 public class GroupSelectionController {
+    //ComboBox para exibir os grupos
     @FXML
     private ComboBox<String> groupComboBox;
 
+    //Botão para entrada em gupo
     @FXML
     private Button enterGroupButton;
-    
+
+    //Botão para voltar
     @FXML
     private Button voltarButton;
 
+    
+    /**
+     * Método de inicialização do controlador.
+     * Carrega os grupos do banco de dados na tela pelo arquivo fxml.
+    */
     @FXML
     private void initialize() {
         carregarGrupos();
     }
 
+     /**
+     * Carrega os grupos do banco de dados do SQLite.
+     * Adiciona no ComboBox.
+     */
     private void carregarGrupos() {
         try (Connection connection = DriverManager.getConnection("jdbc:sqlite:grupo.db")) {
             String sql = "SELECT nome FROM Grupos";
@@ -42,6 +60,11 @@ public class GroupSelectionController {
         }
     }
 
+    
+    /**
+     * O usuário seleciona um grupo e pressiona no botão para entrar.
+     * O sistema confirma se um grupo foi selecionado para entrar.
+     */
     @FXML
     private void handleEnterGroup() {
         String selectedGroup = groupComboBox.getValue();
@@ -52,6 +75,11 @@ public class GroupSelectionController {
         }
     }
 
+    
+    /**
+     * A tela do chat do grupo é aberta de acordo com o grupo selecionado.
+     * Caso não tenha sido selecionado um grupo é apresentado uma mensagem de erro.
+     */
     private void abrirTelaChat(String group) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ChatView.fxml")); // Verifique o caminho aqui
@@ -74,7 +102,12 @@ public class GroupSelectionController {
             System.out.println("Erro ao abrir a tela de chat: " + e.getMessage());
         }
     }
+
     
+    /**
+     * Opção de voltar para a tela inicial
+     */
+
     @FXML
     private void handleVoltarButtonAction() {
         try {
