@@ -10,4 +10,8 @@ Testes e validação de cada módulo.
 Documentação do projeto.
 
 ## 3.2 Atribuição de Tarefas e Responsabilidades:
-Cada membro do grupo será responsável por diferentes partes do projeto, como back-end, front-end, testes e documentação. 
+Cada membro do grupo ficou responsável por diferentes partes do projeto:
+Maria Clara - back-end
+Lucas Gabriel - front-end
+Leonardo - testes
+Andreia - documentação
