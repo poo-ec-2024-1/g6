@@ -3,7 +3,7 @@
 **Nome:** Maria Clara Dutra 
 **Curso:** Engenharia da Computação  
 **Instituição:** UFG  
-**Função no Grupo:** Líder
+**Função no Grupo:** Líder e progamador
 
 ---
 
