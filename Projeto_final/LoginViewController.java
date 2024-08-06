@@ -11,21 +11,36 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+
+/**
+ * Controlador da Tela de Login.
+ * Responsável pelo funcionamento correto da tela de login junto com o banco de dados fornecido permitindo a navegação pelas tela seguintes.
+ */
 public class LoginViewController {
+    //Email do usuário
     @FXML
     private TextField emailField;
 
+    //Senha do usuário
     @FXML
     private PasswordField senhaField;
 
+    //Botão de login
     @FXML
     private Button loginButton;
 
+     //Botão para ir para o cadastro
     @FXML
     private Button cadastrarButton;
 
-    // Outros métodos e lógica da tela de login aqui
 
+    // Outros métodos e lógicas de login aqui
+    /**
+     * O usuário insere os dados e pressiona o botão de login.
+     * Assim o sistema recebe as informações do usuário verificando se são válidas segundo o banco de dados.
+     * Caso as informações sejam aceitas, abre a tela de perfil do usuário.
+     * Enquanto se forem negadas apresenta uma mensagem de erro.  
+     */
     @FXML
     private void handleLogin() {
         String email = emailField.getText();
@@ -39,7 +54,13 @@ public class LoginViewController {
             System.out.println("Usuário não encontrado. Verifique o email e senha.");
         }
     }
+
     
+    /**
+     * Quando o usuário pressiona o botão de cadastro é aberto uma nova janela.
+     * Tela criada para o usuário realizar o cadastro.
+     * Há a opção de fechar a janela de login.
+     */
     @FXML
     private void handleCadastro() {
         try {
@@ -61,6 +82,11 @@ public class LoginViewController {
     }
 
 
+    /**
+     * Verifica se as informações (email e senha) fornecidas existem no banco de dados.
+     * @return true caso sejam válidas.
+     * @return false caso sejam inválidas.
+     */
     private boolean verificarUsuarioNoBanco(String email, String senha) {
         try {
             Connection connection = DriverManager.getConnection("jdbc:sqlite:usuarios.db");
@@ -78,8 +104,14 @@ public class LoginViewController {
         }
     }
 
+    
+    /**
+     * Se o login for aceito abre o arquivo FXML da tela de perfil.
+     * Fecha a tela de login opcionalmente.
+     */
     public void abrirTelaPerfil() {
         try {
+            // Carrega o arquivo FXML da tela de perfil
             FXMLLoader loader = new FXMLLoader(getClass().getResource("perfil.fxml"));
             Parent root = loader.load();
 
