@@ -13,6 +13,9 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.io.IOException;
 
+/**
+ * Controlador para a tela de cadastro de usuários.
+ */
 public class CadastroViewController {
     @FXML
     private TextField nomeField;
@@ -35,6 +38,13 @@ public class CadastroViewController {
     @FXML
     private Label situacaoLabel;
 
+    /**
+     * Método após pressionar o botão cadastro.
+     * Recebe os dados digitados pelo usuário.
+     * Confere se as senhas coincidem.
+     * Caso coincidam apresenta uma mensagem de confirmação 
+     * Caso não coincidam apresenta uma mensagem de erro.
+     */
     @FXML
     private void handleCadastrar() {
         String nome = nomeField.getText();
@@ -53,6 +63,12 @@ public class CadastroViewController {
         }
     }
 
+    
+    /**
+     * Insere os dados no banco de dados.
+     * Caso seja inserido dados válidos @return true
+     * Caso seja inserido dados inválidos @return false
+     */
     private boolean inserirDadosNoBanco(String nome, String email, String senha) {
         try {
             Connection connection = DriverManager.getConnection("jdbc:sqlite:usuarios.db");
@@ -70,7 +86,11 @@ public class CadastroViewController {
             return false;
         }
     }
+
     
+    /**
+     * Botão para voltar para a tela anterior.
+     */
     @FXML
     private void handleVoltarButtonAction() {
         try {
