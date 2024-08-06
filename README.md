@@ -1,9 +1,6 @@
-# Documentação do projeto: Rede social para estudantes
-## Etapa 1
-* [Seção 1](https://github.com/poo-ec-2024-1/g6/blob/444b06d49ffe74b0cc837899ecf132666f338cd1/Etapa1/seção1.md)
+# Projeto: Rede social para estudantes
+## Documentação 
 
-* [Seção 2](https://github.com/poo-ec-2024-1/g6/blob/444b06d49ffe74b0cc837899ecf132666f338cd1/Etapa1/seção2.md)
+* [Etapa](https://github.com/poo-ec-2024-1/g6/tree/804c2ff719791432698f8eb766378be1954a5820/Etapa1)
 
-* [Seção 3](https://github.com/poo-ec-2024-1/g6/blob/444b06d49ffe74b0cc837899ecf132666f338cd1/Etapa1/seção3.md)
-
-* [Seção 4](https://github.com/poo-ec-2024-1/g6/blob/444b06d49ffe74b0cc837899ecf132666f338cd1/Etapa1/se%C3%A7%C3%A3o4.md)
+* [Relatórios Individuais]()
