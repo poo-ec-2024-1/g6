@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=ProjetoViewController
+comment1.params=
+comment1.target=void\ handleCadastrar()
+comment2.params=
+comment2.target=void\ abrirTelaPrincipal()
+comment3.params=
+comment3.target=void\ handleVoltarButtonAction()
+numComments=4
