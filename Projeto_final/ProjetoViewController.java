@@ -108,7 +108,7 @@ public class ProjetoViewController {
     
     /**
      * Controla o botão de voltar.
-     * Carrega anterior novamente.
+     * Carrega a tela anterior novamente.
      */
     @FXML
     private void handleVoltarButtonAction() {
