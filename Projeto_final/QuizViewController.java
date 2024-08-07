@@ -17,25 +17,31 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Controlador para a tela de quiz.
+ */
 public class QuizViewController {
-
+    //Label para a pergunta
     @FXML
     private Label questionLabel;
 
+    //Botões para as opções de rádio
     @FXML
     private RadioButton option1;
-
     @FXML
     private RadioButton option2;
-
     @FXML
     private RadioButton option3;
-
     @FXML
     private RadioButton option4;
 
     private ToggleGroup optionsGroup;
+
     
+    /**
+     * Controla o botão de voltar.
+     * Carrega a tela anterior novamente.
+     */
     @FXML
     private Button voltarButton;
 
@@ -43,7 +49,11 @@ public class QuizViewController {
     private int currentQuestionIndex = 0;
     private int correctAnswersCount = 0;
     private List<Question> questions = new ArrayList<>();
-
+    
+    /**
+     * Método após o início do arquivo fxml.
+     * Inicializa o grupo de opções de rádio.
+     */
     @FXML
     public void initialize() {
         optionsGroup = new ToggleGroup();
@@ -53,12 +63,19 @@ public class QuizViewController {
         option4.setToggleGroup(optionsGroup);
     }
 
+    /**
+     * O controlador inicia com o assunto selecionado.
+     * Carrega as perguntas.
+     */
     public void inicializarComAssunto(String assunto) {
         this.assuntoSelecionado = assunto;
         carregarPerguntas();
         exibirPergunta(currentQuestionIndex);
     }
 
+    /**
+     * Carrega as perguntas do banco de dados para o assunto selecionado.
+     */
     private void carregarPerguntas() {
         String url = "jdbc:sqlite:quiz.db";
         String sql = "SELECT p.id, p.texto, o.texto, o.correta FROM Perguntas p " +
@@ -91,6 +108,9 @@ public class QuizViewController {
         }
     }
 
+    /**
+     * Exibe a pergunta atual na tela.
+     */
     private void exibirPergunta(int index) {
         if (index < questions.size()) {
             Question question = questions.get(index);
@@ -105,6 +125,11 @@ public class QuizViewController {
         }
     }
 
+    /**
+     * Método inicia quando o botão next é pressionado.
+     * Verifica a resposta selecionada.
+     * Avança para a próxima pergunta.
+     */
     @FXML
     private void handleNext() {
         if (optionsGroup.getSelectedToggle() != null) {
@@ -128,6 +153,10 @@ public class QuizViewController {
         }
     }
 
+    /**
+     * Crie uma nova janela.
+     * Mostra o resultado do quiz.
+     */
     private void mostrarResultado() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Resultado do Quiz");
@@ -136,7 +165,9 @@ public class QuizViewController {
         alert.showAndWait();
     }
 
-    // Classes auxiliares para representar perguntas e opções
+    /**
+     * Classe que representa as perguntas.
+     */
     private static class Question {
         private final int id;
         private final String texto;
@@ -164,6 +195,9 @@ public class QuizViewController {
         }
     }
 
+    /**
+     * Classe que representa as opções de resposta
+     */
     private static class Option {
         private final String texto;
         private final boolean correta;
@@ -181,7 +215,12 @@ public class QuizViewController {
             return correta;
         }
     }
+
     
+    /**
+     * Controla o botão de voltar.
+     * Carrega a tela anterior novamente.
+     */
             @FXML
     private void handleVoltarButtonAction() {
         try {
