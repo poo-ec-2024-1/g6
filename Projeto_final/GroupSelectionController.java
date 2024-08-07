@@ -105,9 +105,9 @@ public class GroupSelectionController {
 
     
     /**
-     * Opção de voltar para a tela inicial
+     * Controla o botão de voltar.
+     * Carrega anterior novamente.
      */
-
     @FXML
     private void handleVoltarButtonAction() {
         try {
