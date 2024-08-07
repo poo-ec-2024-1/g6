@@ -17,29 +17,43 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.io.IOException;
 
+/**
+ * Controlador para a tela de visão do projeto.
+ */
 public class ProjetoViewController {
-    
+    //Nome do projeto
     @FXML
     private TextField nomeField;
 
+    //Descrição do projeto
     @FXML
     private TextArea descricaoField;
 
+    //Data de inicio do projeto
     @FXML
     private DatePicker dataInicioPicker;
 
+    //Data de fim do projeto
     @FXML
     private DatePicker dataFimPicker;
 
+    //Botão para cadastrar o projeto
     @FXML
     private Button cadastrarButton;
 
+    //Botão para abrir a tela principal
     @FXML
     private Button abrirTelaPrincipalButton;
-    
+
+    //Botão para voltar
     @FXML
     private Button voltarButton;
 
+    
+    /**
+     * Método para quando o botão de cadastrar é pressionado.
+     * Cadastra um novo projeto no banco de dados.
+     */
     @FXML
     private void handleCadastrar() {
         String nome = nomeField.getText();
@@ -66,6 +80,11 @@ public class ProjetoViewController {
         }
     }
 
+    
+    /**
+     * Método para abrir a tela principal.
+     * Carrega a tela principal e fecha a atual.
+     */
     @FXML
     private void abrirTelaPrincipal() {
         try {
@@ -85,7 +104,12 @@ public class ProjetoViewController {
             e.printStackTrace();
         }
     }
+
     
+    /**
+     * Controla o botão de voltar.
+     * Carrega anterior novamente.
+     */
     @FXML
     private void handleVoltarButtonAction() {
         try {
