@@ -13,22 +13,37 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-public class SelecaoAssuntoController {
 
+/**
+ * Controlador para a seleção de assuntos para o quiz.
+ */
+public class SelecaoAssuntoController {
+    //ComboBox para exibir os assuntos
     @FXML
     private ComboBox<String> assuntoComboBox;
 
+    //Botão para confirmar a seleção do assunto
     @FXML
     private Button confirmarButton;
-    
+
+    //Botão de voltar
     @FXML
     private Button voltarButton;
 
+    /**
+     * Método após a inicialização do arquivo fxml.
+     * Carrega os assuntos do ComboBox.
+     */
     @FXML
     public void initialize() {
         carregarAssuntos();
     }
-
+    
+    /**
+     * Confirma se foi selecionado algum assunto.
+     * Caso tenha sido inicia o quiz com o assunto escolhido.
+     * Caso não tenha sido apresenta uma mensagem de erro.
+     */
     @FXML
     private void handleConfirmar() {
         String assuntoSelecionado = assuntoComboBox.getSelectionModel().getSelectedItem();
@@ -55,6 +70,11 @@ public class SelecaoAssuntoController {
         }
     }
 
+    
+    /**
+     * Carrega a lista com os assuntos disponíveis no banco de dados.
+     * Adiciona o assunto ao ComboBox.
+     */
     private void carregarAssuntos() {
         ArrayList<String> assuntos = new ArrayList<>();
         try (Connection conn = DriverManager.getConnection("jdbc:sqlite:quiz.db")) {
@@ -71,7 +91,12 @@ public class SelecaoAssuntoController {
 
         assuntoComboBox.getItems().addAll(assuntos);
     }
+
     
+    /**
+     * Controla o botão de voltar.
+     * Carrega anterior novamente.
+     */
         @FXML
     private void handleVoltarButtonAction() {
         try {
